@@ -1,0 +1,94 @@
+.inspector {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-block: 18px;
+  display: grid;
+  grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1.65fr);
+  gap: 24px;
+  border-block: 1px solid var(--app-color-border-secondary);
+}
+
+.heading p {
+  margin: 0;
+  color: var(--app-color-primary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.heading h2 {
+  margin: 4px 0 0;
+  color: var(--app-color-text-heading);
+  font-size: 15px;
+}
+
+.tokenGrid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 18px;
+}
+
+.token {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.swatch,
+.metric {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border: 1px solid var(--app-color-border-secondary);
+  border-radius: var(--app-border-radius-sm);
+}
+
+.metric {
+  display: grid;
+  place-items: center;
+  color: var(--app-color-primary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  background: var(--app-color-primary-bg);
+}
+
+.token > div {
+  min-width: 0;
+}
+
+.token code,
+.token output {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.token code {
+  color: var(--app-color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.token output {
+  margin-top: 2px;
+  color: var(--app-color-text);
+  font-size: 11px;
+}
+
+@media (max-width: 820px) {
+  .inspector {
+    grid-template-columns: 1fr;
+  }
+
+  .tokenGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .tokenGrid {
+    grid-template-columns: 1fr;
+  }
+}

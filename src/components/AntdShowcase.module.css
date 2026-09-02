@@ -1,0 +1,78 @@
+.section {
+  min-width: 0;
+}
+
+.sectionHeader {
+  min-height: 54px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: var(--app-color-primary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.sectionHeader h2 {
+  margin: 4px 0 0;
+  color: var(--app-color-text-heading);
+  font-size: 18px;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.cardHeader {
+  background: var(--app-color-fill-alter);
+}
+
+.cardBody {
+  display: grid;
+  gap: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.formGrid label {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+}
+
+.formGrid label > span,
+.progressRow > span {
+  color: var(--app-color-text-secondary);
+  font-size: 12px;
+}
+
+.formGrid :global(.ant-select) {
+  width: 100%;
+}
+
+.progressRow {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 520px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .progressRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}

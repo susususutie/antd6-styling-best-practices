@@ -1,0 +1,178 @@
+.app {
+  height: 100svh;
+  overflow: hidden;
+  color: var(--app-color-text);
+  font-size: var(--app-font-size);
+  line-height: var(--app-line-height);
+}
+
+.shell {
+  height: 100%;
+  overflow: hidden;
+  background: var(--app-color-bg-layout);
+}
+
+.header {
+  padding-inline: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  line-height: var(--app-line-height);
+  color: var(--app-color-text);
+  background: var(--app-color-bg-container);
+  border-bottom: 1px solid var(--app-color-border-secondary);
+}
+
+.brand,
+.headerMeta,
+.headerActions {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  min-width: 0;
+  gap: 12px;
+}
+
+.brandMark {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  color: var(--app-color-primary);
+  font-size: 20px;
+  background: var(--app-color-primary-bg);
+  border: 1px solid var(--app-color-primary-border);
+  border-radius: var(--app-border-radius);
+}
+
+.eyebrow,
+.sectionIndex {
+  margin: 0;
+  color: var(--app-color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: var(--app-color-primary);
+}
+
+.brand h1 {
+  margin: 1px 0 0;
+  color: var(--app-color-text-heading);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 650;
+}
+
+.headerMeta {
+  justify-content: flex-end;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.headerActions {
+  min-width: 0;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.mobileSettings {
+  display: none;
+}
+
+.workspace {
+  overflow: hidden;
+}
+
+.content {
+  padding: 28px clamp(20px, 3vw, 44px) 56px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.intro {
+  max-width: 1360px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(320px, 1.15fr);
+  align-items: end;
+  gap: 32px;
+}
+
+.intro h2 {
+  margin: 5px 0 0;
+  color: var(--app-color-text-heading);
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+.intro > p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--app-color-text-secondary);
+  line-height: 1.75;
+}
+
+.showcaseGrid {
+  max-width: 1360px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 1040px) {
+  .showcaseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .header {
+    padding-inline: 16px;
+  }
+
+  .headerMeta > :last-child {
+    display: none;
+  }
+
+  .mobileSettings {
+    display: inline-flex;
+  }
+
+  .content {
+    padding: 24px 16px 40px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+}
+
+.drawerBody {
+  padding: 0;
+  overflow: hidden;
+}
+
+.drawerControls {
+  height: 100%;
+}
+
+.drawerControls > aside {
+  border-right: 0;
+}
