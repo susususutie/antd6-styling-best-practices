@@ -2,6 +2,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
+  base: "/antd6-styling-best-practices/",
   plugins: [react()],
   staged: {
     "*": "vp check --fix",
